@@ -1,0 +1,14 @@
+# Binaries / OS
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Editor
+.vscode/*
+!.vscode/extensions.json
+*.code-workspace
+
+# Logs / temp
+*.log
+*.tmp
+~$*.docx
