@@ -72,7 +72,7 @@
 </div>
 <div class="mini-stats">
 <div class="mini-card"><div class="mini-top"><span>&lt;/&gt;</span><b>02</b></div><div>PROJECTS</div></div>
-<div class="mini-card"><div class="mini-top"><span>O</span><b>00</b></div><div>CERTIFICATES</div></div>
+<div class="mini-card"><div class="mini-top"><span>O</span><b>02</b></div><div>CERTIFICATES</div></div>
 <div class="mini-card"><div class="mini-top"><span>+</span><b>02</b></div><div>COMPLETED WORK</div></div>
 </div>
 </section>
@@ -95,7 +95,7 @@
     <div class="eyebrow">CAPSTONE · GROUP PROJECT · 01</div>
     <h3>St. Agnes Academy<br>Alumni Management System</h3>
     <p>A capstone project developed by our team to give St. Agnes Academy a centralized alumni management platform where no dedicated system previously existed. My contribution focused on the front-end—building responsive, organized, and user-friendly interfaces from the project requirements.</p>
-    <div class="project-meta"><span>Role</span><b>Front-End Designer</b><span>Type</span><b>Capstone · Group</b><span>Stack</span><b>HTML · CSS · JavaScript · React · Database</b></div>
+    <div class="project-meta"><span>Role</span><b>Front-End Designer</b><span>Type</span><b>Capstone · Group</b><span>Stack</span><b>HTML · CSS · JavaScript · React</b></div>
     <div class="project-actions"><a class="btn-light magnetic" href="https://saa-alumni-production.up.railway.app/#/login" target="_blank" rel="noopener">View Live Project ↗</a><a class="btn-ghost magnetic" href="#contact">Project Details</a></div>
   </div>
 </div>
@@ -108,17 +108,22 @@
       <div class="eyebrow">WEB APPLICATION · 02</div>
       <h3>Angel's<br>Attendance Portal</h3>
       <p>An attendance management portal that securely reads an existing Google Sheets tracker without changing its attendance or payroll data. It includes an admin dashboard, employee directory, weekly tracker, and a kiosk-style time clock with selfie capture and PIN access.</p>
-      <div class="project-meta"><span>Type</span><b>Attendance Management Web App</b><span>Features</span><b>Time Clock · Employee Directory · Weekly Tracker</b><span>Stack</span><b>PHP · Google Sheets API · SQLite · Docker</b></div>
+      <div class="project-meta"><span>Type</span><b>Attendance Management Web App</b><span>Features</span><b>Time Clock · Employee Directory · Weekly Tracker</b><span>Stack</span><b>PHP · HTML · CSS · JavaScript</b></div>
       <div class="project-actions"><a class="btn-light magnetic" href="https://angels-attendance-portal-production.up.railway.app/login.php" target="_blank" rel="noopener">View Live Project ↗</a><a class="btn-ghost magnetic" href="https://github.com/SARMIENTO0206/angels-attendance-portal" target="_blank" rel="noopener">View on GitHub ↗</a></div>
     </div>
   </div>
 </div>
 <div class="tab-panel" id="tab-certificates" role="tabpanel" aria-labelledby="tabbtn-certificates" hidden>
 <div class="cert-grid">
-<!-- No certificates yet — add real ones here when available -->
 <article class="cert-card">
-<div class="cert-img">No certificates yet<br /><small>coming soon</small></div>
-<div class="cert-name">00 CERTIFICATES</div>
+<div class="cert-img cert-photo"><img src="certificate-seminar-1.png" style="aspect-ratio:1585/1120" alt="Certificate of Attendance — Marketing ME Live Career Seminar, Bestlink College of the Philippines" loading="lazy" /></div>
+<div class="cert-name">MARKETING ME LIVE · CAREER SEMINAR</div>
+<div class="cert-meta">Bestlink College of the Philippines · Jobs180.com · 10/07/2026</div>
+</article>
+<article class="cert-card">
+<div class="cert-img cert-photo"><img src="certificate-seminar-2.png" alt="Certificate of Appreciation — Unlocking AI Potential: The Art and Science of Prompt Engineering webinar, Bestlink College of the Philippines" loading="lazy" /></div>
+<div class="cert-name">PROMPT ENGINEERING · AI WEBINAR</div>
+<div class="cert-meta">Bestlink College of the Philippines · BSIT Department · 10/08/2026</div>
 </article>
 </div>
 </div>
@@ -133,7 +138,6 @@
 <div class="tech tech-git"><span class="t-icon">GIT</span>Git</div>
 <div class="tech tech-github"><span class="t-icon">GH</span>GitHub</div>
 <div class="tech tech-php"><span class="t-icon">PHP</span>PHP</div>
-<div class="tech tech-python"><span class="t-icon">PY</span>Python</div>
 </div>
 </div>
 </section>
@@ -146,11 +150,21 @@
   <p>Have a project, collaboration, or opportunity in mind? Send me a message and let’s turn the idea into a clean, responsive digital experience.</p>
   <div class="contact-actions">
     <a class="btn-light magnetic" href="mailto:keneki0206@gmail.com">Email Me ↗</a>
+    <button class="btn-ghost magnetic" type="button" id="copyEmail" data-email="keneki0206@gmail.com">Copy Email</button>
     <a class="btn-ghost magnetic" href="https://github.com/SARMIENTO0206" target="_blank" rel="noopener">GitHub ↗</a>
-    <a class="btn-ghost magnetic" href="RESUME.docx" download="RESUME.docx">Download CV</a>
+    <a class="btn-ghost magnetic" href="RESUME.pdf" download="Nicose-Sarmiento-CV.pdf">Download CV</a>
   </div>
+  <form class="contact-form" id="contactForm" novalidate>
+    <div class="cf-row">
+      <input type="text" id="cfName" name="name" placeholder="Your name" required autocomplete="name" />
+      <input type="email" id="cfEmail" name="email" placeholder="Your email" required autocomplete="email" />
+    </div>
+    <textarea id="cfMsg" name="message" rows="4" placeholder="Your message" required></textarea>
+    <button class="btn-light magnetic" type="submit">Send Message ↗</button>
+    <p class="cf-note" id="cfNote" role="status"></p>
+  </form>
   <div class="contact-rule"></div>
-  <div class="contact-bottom"><span>Nicose Sarmiento</span><span>Quezon City · Philippines</span><span>BSIT · 4th Year</span><span>Available for opportunities</span></div>
+  <div class="contact-bottom"><span>Nicose Sarmiento</span><span>Quezon City · Philippines</span><span>BSIT · 4th Year</span><span>Open for OJT · Internship · Junior Front-End roles</span></div>
 </div>
 </section>
 <footer class="footer">© <span id="year">2026</span> Nicose Sarmiento — Front-End Designer. All rights reserved.</footer>

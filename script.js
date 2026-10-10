@@ -167,3 +167,82 @@
   document.addEventListener("keydown", (e) => { if (e.key === "Escape") { close(); btn.blur(); } });
   window.addEventListener("resize", () => { if (window.innerWidth > 900) close(); });
 })();
+
+// Certificate lightbox
+(() => {
+  const imgs = Array.from(document.querySelectorAll(".cert-photo img"));
+  if (!imgs.length) return;
+  const box = document.createElement("div");
+  box.className = "lightbox";
+  box.hidden = true;
+  box.setAttribute("role", "dialog");
+  box.setAttribute("aria-modal", "true");
+  box.setAttribute("aria-label", "Certificate preview");
+  box.innerHTML = '<button type="button" class="lightbox-close" aria-label="Close preview">&times;</button><img alt="" />';
+  document.body.appendChild(box);
+  const big = box.querySelector("img");
+  const closeBtn = box.querySelector(".lightbox-close");
+  let last = null;
+  const close = () => {
+    box.hidden = true;
+    document.body.style.overflow = "";
+    if (last) last.focus();
+  };
+  const open = (img) => {
+    last = img;
+    big.src = img.currentSrc || img.src;
+    big.alt = img.alt;
+    box.hidden = false;
+    document.body.style.overflow = "hidden";
+    closeBtn.focus();
+  };
+  imgs.forEach((img) => {
+    img.tabIndex = 0;
+    img.setAttribute("role", "button");
+    img.setAttribute("aria-label", "View larger: " + img.alt);
+    img.addEventListener("click", () => open(img));
+    img.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); open(img); }
+    });
+  });
+  box.addEventListener("click", (e) => { if (e.target !== big) close(); });
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !box.hidden) close(); });
+})();
+
+// Contact: copy email + message form (opens the visitor's mail app with a prefilled message)
+(() => {
+  const copyBtn = document.getElementById("copyEmail");
+  if (copyBtn) {
+    const label = copyBtn.textContent;
+    copyBtn.addEventListener("click", async () => {
+      const email = copyBtn.dataset.email;
+      try { await navigator.clipboard.writeText(email); }
+      catch (_) {
+        const t = document.createElement("textarea");
+        t.value = email; document.body.appendChild(t); t.select();
+        document.execCommand("copy"); t.remove();
+      }
+      copyBtn.textContent = "Copied!";
+      setTimeout(() => { copyBtn.textContent = label; }, 1800);
+    });
+  }
+
+  const form = document.getElementById("contactForm");
+  if (!form) return;
+  const note = document.getElementById("cfNote");
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const name = form.cfName, email = form.cfEmail, msg = form.cfMsg;
+    let ok = true;
+    [name, email, msg].forEach((f) => {
+      const valid = f.value.trim() && (f !== email || /^\S+@\S+\.\S+$/.test(f.value.trim()));
+      f.classList.toggle("invalid", !valid);
+      if (!valid) ok = false;
+    });
+    if (!ok) { note.textContent = "Please fill in all fields with a valid email."; return; }
+    const subject = encodeURIComponent("Portfolio message from " + name.value.trim());
+    const body = encodeURIComponent(msg.value.trim() + "\n\n— " + name.value.trim() + " (" + email.value.trim() + ")");
+    note.textContent = "Opening your email app…";
+    window.location.href = "mailto:keneki0206@gmail.com?subject=" + subject + "&body=" + body;
+  });
+})();
