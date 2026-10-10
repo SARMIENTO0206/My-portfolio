@@ -9,7 +9,9 @@
 <meta property="og:title" content="Nicose Sarmiento — Front-End Designer" />
 <meta property="og:description" content="Creating clean, responsive, and user-friendly web interfaces." />
 <meta property="og:type" content="website" />
-<meta property="og:image" content="nicose.png" />
+<meta property="og:url" content="https://nicose-sarmiento-production.up.railway.app/" />
+<meta property="og:image" content="https://nicose-sarmiento-production.up.railway.app/nicose.png" />
+<meta name="twitter:card" content="summary" />
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%237c5cff'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='16' font-weight='bold' text-anchor='middle' fill='white'%3EN%3C/text%3E%3C/svg%3E" />
 <link rel="preload" as="image" href="nicose.png" />
 <link rel="stylesheet" href="style.css" />
@@ -97,7 +99,7 @@
 <div class="featured-project">
   <div class="browser-mockup">
     <div class="browser-bar"><i></i><i></i><i></i><span>saa-alumni-production.up.railway.app</span></div>
-    <div class="mock-screen project-shot"><img src="saa-alumni-project.png" alt="St. Agnes Academy Alumni Management System project screenshot" loading="lazy" /></div>
+    <div class="mock-screen project-shot"><img src="saa-alumni-project.jpg" alt="St. Agnes Academy Alumni Management System project screenshot" loading="lazy" /></div>
   </div>
   <div class="project-copy">
     <div class="eyebrow">CAPSTONE · GROUP PROJECT · 01</div>
@@ -110,7 +112,7 @@
   <div class="featured-project">
     <div class="browser-mockup">
       <div class="browser-bar"><i></i><i></i><i></i><span>angels-attendance-portal-production.up.railway.app</span></div>
-      <div class="mock-screen project-shot attendance-shot"><img src="attendance-project.png" alt="Angel's Attendance Portal admin sign-in screenshot" loading="lazy" /></div>
+      <div class="mock-screen project-shot attendance-shot"><img src="attendance-project.jpg" alt="Angel's Attendance Portal admin sign-in screenshot" loading="lazy" /></div>
     </div>
     <div class="project-copy">
       <div class="eyebrow">WEB APPLICATION · 02</div>
@@ -124,12 +126,12 @@
 <div class="tab-panel" id="tab-certificates" role="tabpanel" aria-labelledby="tabbtn-certificates" hidden>
 <div class="cert-grid">
 <article class="cert-card">
-<div class="cert-img cert-photo"><img src="certificate-seminar-1.png" style="aspect-ratio:1585/1120" alt="Certificate of Attendance — Marketing ME Live Career Seminar, Bestlink College of the Philippines" loading="lazy" /></div>
+<div class="cert-img cert-photo"><img src="certificate-seminar-1.jpg" style="aspect-ratio:1585/1120" alt="Certificate of Attendance — Marketing ME Live Career Seminar, Bestlink College of the Philippines" loading="lazy" /></div>
 <div class="cert-name">MARKETING ME LIVE · CAREER SEMINAR</div>
 <div class="cert-meta">Bestlink College of the Philippines · Jobs180.com · 10/07/2026</div>
 </article>
 <article class="cert-card">
-<div class="cert-img cert-photo"><img src="certificate-seminar-2.png" alt="Certificate of Appreciation — Unlocking AI Potential: The Art and Science of Prompt Engineering webinar, Bestlink College of the Philippines" loading="lazy" /></div>
+<div class="cert-img cert-photo"><img src="certificate-seminar-2.jpg" alt="Certificate of Appreciation — Unlocking AI Potential: The Art and Science of Prompt Engineering webinar, Bestlink College of the Philippines" loading="lazy" /></div>
 <div class="cert-name">PROMPT ENGINEERING · AI WEBINAR</div>
 <div class="cert-meta">Bestlink College of the Philippines · BSIT Department · 10/08/2026</div>
 </article>
@@ -164,8 +166,8 @@
   </div>
   <form class="contact-form" id="contactForm" novalidate>
     <div class="cf-row">
-      <input type="text" id="cfName" name="name" placeholder="Your name" required autocomplete="name" />
-      <input type="email" id="cfEmail" name="email" placeholder="Your email" required autocomplete="email" />
+      <input type="text" id="cfName" name="name" placeholder="Your name" required autocomplete="name" enterkeyhint="next" />
+      <input type="email" id="cfEmail" name="email" placeholder="Your email" required autocomplete="email" inputmode="email" enterkeyhint="next" />
     </div>
     <textarea id="cfMsg" name="message" rows="4" placeholder="Your message" required></textarea>
     <button class="btn-light magnetic" type="submit">Send Message ↗</button>

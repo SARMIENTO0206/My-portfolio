@@ -185,6 +185,7 @@
   let last = null;
   const close = () => {
     box.hidden = true;
+    box.classList.remove("zoomed");
     document.body.style.overflow = "";
     if (last) last.focus();
   };
@@ -205,7 +206,10 @@
       if (e.key === "Enter" || e.key === " ") { e.preventDefault(); open(img); }
     });
   });
-  box.addEventListener("click", (e) => { if (e.target !== big) close(); });
+  box.addEventListener("click", (e) => {
+    if (e.target === big) box.classList.toggle("zoomed");
+    else close();
+  });
   document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !box.hidden) close(); });
 })();
 
