@@ -1,17 +1,29 @@
 # Nicose Sarmiento — Portfolio
 
-Front-End Designer portfolio (static site: HTML + CSS + JS).
+Personal portfolio of Nicose Sarmiento, a 4th-year BSIT student and aspiring Front-End Designer.
 
-**Live demo:** enable GitHub Pages (Settings → Pages → Deploy from branch → `main` / root) or open `index.html` directly.
+**Live site:** https://nicose-sarmiento-production.up.railway.app
+
+## Sections
+- **Home** – intro
+- **About** – bio, quick facts, CV
+- **Portfolio** – projects, certificates, tech stack
+- **Contact** – email, GitHub, Facebook, message form
+
+## Built with
+HTML · CSS · JavaScript (no frameworks, no build step)
 
 ## Run locally
-- Double-click `index.html`, or
-- `python -m http.server 8000` then open http://localhost:8000
+Open `index.html` in your browser, or run `npx serve` in this folder.
 
-## Structure
-- `index.html` — sections: Home / About / Portfolio / Contact
-- `style.css` — dark grid theme, responsive, scroll-snap
-- `script.js` — tabs, nav state, reveal, mobile menu, side dots
-- `nicose.png` — portrait / ID badge photo
-- `saa-alumni-project.png` — capstone project screenshot
-- `RESUME.docx` — downloadable CV (Download CV buttons point here)
+## Files
+| File | Purpose |
+|------|---------|
+| `index.html` | Page content |
+| `style.css` | Styles (dark theme, responsive) |
+| `script.js` | Tabs, menu, animations, certificate viewer, contact form |
+| `RESUME.pdf` / `RESUME.docx` | Downloadable CV |
+| `*.jpg`, `nicose.png` | Project, certificate and profile images |
+
+## Deploy
+Pushing to `main` auto-deploys to Railway.
