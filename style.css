@@ -1145,6 +1145,14 @@ body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;bac
 .tab-panel[hidden] { display: none !important; }
 .nav { transition: box-shadow .25s, border-color .25s; }
 .nav.is-scrolled { border-color: rgba(124,92,255,.45); box-shadow: 0 10px 34px rgba(0,0,0,.45); }
+/* About quick facts */
+.about-sec .desc + .desc { margin-top: 12px; }
+.quick-facts { list-style: none; margin: 22px 0 0; padding: 0; display: grid; gap: 8px; }
+.quick-facts li { display: grid; grid-template-columns: 90px 1fr; gap: 12px; font-size: 13px; padding-bottom: 8px; border-bottom: 1px solid rgba(255,255,255,.08); }
+.quick-facts span { color: #aaa0ff; font: 11px var(--mono); text-transform: uppercase; letter-spacing: .08em; padding-top: 2px; }
+.quick-facts b { font-weight: 500; color: #ddd; }
+.about-sec .quick-facts + .about-btns { margin-top: 22px; }
+
 @media (min-width: 901px) {
   html { scroll-snap-type: y proximity; }
 }
